@@ -1,0 +1,346 @@
+/* ============================================
+   Christian Hospital Tank - Responsive Styles
+   ============================================ */
+
+/* ============================================
+   LARGE DESKTOP (1400px+)
+   ============================================ */
+@media (min-width: 1400px) {
+  .container { max-width: 1340px; }
+}
+
+/* ============================================
+   TABLET LANDSCAPE / SMALL DESKTOP (992px - 1199px)
+   ============================================ */
+@media (max-width: 1199px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctors-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-floating-1,
+  .hero-floating-2 {
+    width: 200px;
+    height: 200px;
+    right: 3%;
+    top: 25%;
+  }
+
+  .hero-floating-2 {
+    width: 150px;
+    height: 150px;
+    right: 5%;
+    top: 27%;
+  }
+
+  .hero-floating-2 i {
+    font-size: 3.5rem;
+  }
+}
+
+/* ============================================
+   TABLET PORTRAIT (768px - 991px)
+   ============================================ */
+@media (max-width: 991px) {
+  /* Navigation */
+  .hamburger { display: flex; }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 90px 24px 40px;
+    gap: 4px;
+    box-shadow: -6px 0 30px rgba(26, 60, 94, 0.2);
+    transition: right 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+  }
+
+  .main-nav.open { right: 0; }
+
+  .main-nav a {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--light-gray);
+    border-radius: 0;
+  }
+
+  .main-nav a:last-child { border-bottom: none; }
+
+  .main-nav a::after { display: none; }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1040;
+  }
+  .nav-overlay.active { display: block; }
+
+  /* Top Bar */
+  .top-bar-left { display: none; }
+  .top-bar-inner { justify-content: center; }
+
+  /* Hero */
+  .hero-floating-1,
+  .hero-floating-2 { display: none; }
+
+  .hero-section { min-height: 90vh; padding: 60px 0; }
+
+  /* Stats */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) { border-bottom: none; }
+
+  /* Welcome */
+  .welcome-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* Departments */
+  .dept-grid { grid-template-columns: repeat(2, 1fr); }
+  .dept-full-grid { grid-template-columns: 1fr; }
+
+  /* Why */
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* News */
+  .news-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Doctors */
+  .doctors-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; }
+
+  /* About */
+  .story-grid { grid-template-columns: 1fr; gap: 60px; }
+  .story-badge { bottom: 20px; right: 20px; }
+  .mv-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Timeline */
+  .timeline::before { left: 20px; }
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  .timeline-dot { left: 20px; }
+  .timeline-content { max-width: 100%; }
+
+  /* Accreditations */
+  .accred-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-bottom-inner { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+/* ============================================
+   MOBILE LARGE (576px - 767px)
+   ============================================ */
+@media (max-width: 767px) {
+  /* Typography */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+
+  .section-padding { padding: 60px 0; }
+  .container { padding: 0 16px; }
+
+  /* Hero */
+  .hero-title { font-size: 2rem; }
+  .hero-text { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .hero-buttons .btn { justify-content: center; }
+  .hero-badge { font-size: 0.72rem; }
+
+  /* Stats */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-number { font-size: 2rem; }
+
+  /* Departments */
+  .dept-grid { grid-template-columns: 1fr; }
+
+  /* Why */
+  .why-grid { grid-template-columns: 1fr; }
+
+  /* News */
+  .news-grid { grid-template-columns: 1fr; }
+
+  /* Doctors */
+  .doctors-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Search bar */
+  .search-filter-bar { flex-direction: column; }
+  .filter-select { width: 100%; }
+
+  /* Department full cards */
+  .dept-full-card { flex-direction: column; gap: 16px; }
+
+  /* Values */
+  .values-grid { grid-template-columns: 1fr; }
+
+  /* Accreditations */
+  .accred-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+
+  /* Contact form */
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form-card { padding: 24px; }
+
+  /* Page hero */
+  .page-hero { padding: 60px 0 40px; }
+  .page-hero h1 { font-size: 1.8rem; }
+
+  /* Emergency banner */
+  .emergency-banner { flex-direction: column; text-align: center; }
+
+  /* Story image */
+  .story-img-placeholder { height: 300px; }
+  .story-badge { bottom: 10px; right: 10px; padding: 14px 18px; }
+  .story-badge .number { font-size: 1.8rem; }
+
+  /* Appointment banner */
+  .appointment-banner { padding: 50px 0; }
+
+  /* Top bar social */
+  .top-bar-right { gap: 10px; }
+}
+
+/* ============================================
+   MOBILE SMALL (up to 575px)
+   ============================================ */
+@media (max-width: 575px) {
+  body { font-size: 15px; }
+
+  .container { padding: 0 14px; }
+
+  /* Logo */
+  .logo-text .hospital-name { font-size: 1.1rem; }
+  .logo-text .hospital-sub { font-size: 0.65rem; }
+  .logo-icon { width: 44px; height: 44px; font-size: 1.2rem; }
+
+  /* Hero */
+  .hero-section { min-height: 100vh; padding: 40px 0 60px; }
+  .hero-title { font-size: 1.7rem; }
+  .hero-badge { font-size: 0.65rem; letter-spacing: 1.5px; }
+
+  /* Stats */
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat-number { font-size: 1.8rem; }
+  .stat-label { font-size: 0.72rem; }
+  .stat-item { padding: 24px 12px; }
+
+  /* Info cards */
+  .info-card { padding: 20px; }
+
+  /* Dept cards */
+  .dept-card { padding: 24px 18px; }
+
+  /* Why cards */
+  .why-icon { width: 64px; height: 64px; font-size: 1.6rem; }
+
+  /* Doctors */
+  .doctors-grid { grid-template-columns: 1fr; }
+
+  /* Doctor card */
+  .doctor-avatar { width: 76px; height: 76px; font-size: 1.3rem; }
+
+  /* Section labels */
+  .section-label { font-size: 0.72rem; letter-spacing: 2px; }
+
+  /* Buttons */
+  .btn { padding: 12px 24px; font-size: 0.88rem; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; }
+
+  /* Timeline */
+  .timeline::before { left: 12px; }
+  .timeline-item,
+  .timeline-item:nth-child(even) { padding-left: 38px; padding-right: 0; }
+  .timeline-dot { left: 12px; width: 12px; height: 12px; top: 22px; }
+  .timeline-content { padding: 16px 18px; }
+
+  /* Story */
+  .story-img-placeholder { height: 260px; }
+  .story-img-placeholder i { font-size: 5rem; }
+
+  /* Appointment */
+  .appointment-banner { padding: 40px 0; }
+  .appointment-banner h2 { font-size: 1.5rem; }
+
+  /* Map */
+  .map-placeholder { height: 260px; }
+  .map-icon-wrap i { font-size: 3rem; }
+
+  /* Emergency */
+  .emergency-banner { padding: 28px 20px; gap: 16px; }
+  .emergency-icon { width: 56px; height: 56px; font-size: 1.5rem; }
+  .emergency-content h3 { font-size: 1.1rem; }
+
+  /* Department full cards */
+  .dept-full-card { padding: 24px; }
+  .dept-full-icon { width: 56px; height: 56px; font-size: 1.5rem; }
+
+  /* Contact info card */
+  .contact-info-card { padding: 18px; }
+  .contact-info-icon { width: 44px; height: 44px; font-size: 1.1rem; }
+
+  /* Welcome features */
+  .welcome-features { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .top-bar,
+  .hamburger,
+  .hero-floating-1,
+  .hero-floating-2,
+  .appointment-banner,
+  .site-footer { display: none; }
+
+  .site-header { position: relative; box-shadow: none; border-bottom: 2px solid var(--primary); }
+  .main-nav { display: flex; position: static; width: auto; height: auto; box-shadow: none; padding: 0; }
+
+  body { font-size: 12pt; color: #000; }
+  h1, h2, h3, h4 { color: #000; }
+
+  .hero-section {
+    min-height: auto;
+    padding: 40px 0;
+    background: #f0f0f0 !important;
+  }
+
+  .hero-title, .hero-text { color: #000 !important; }
+
+  .page-hero {
+    background: #e0e0e0 !important;
+    padding: 30px 0;
+  }
+  .page-hero h1, .breadcrumb { color: #000 !important; }
+
+  .btn { border: 1px solid #000; background: transparent !important; color: #000 !important; }
+}

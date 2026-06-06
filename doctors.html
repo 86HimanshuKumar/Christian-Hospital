@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet the dedicated medical team at Christian Hospital Sialkot — specialist doctors in Obstetrics, Pediatrics, Surgery, Medicine, Orthopedics, and more." />
+  <title>Our Doctors | Christian Hospital Sialkot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <a href="tel:0523251234"><i class="fa-solid fa-phone"></i>052-3251234</a>
+          <a href="mailto:himanshu6245554@gmail.com"><i class="fa-solid fa-envelope"></i>himanshu6245554@gmail.com</a>
+        </div>
+        <div class="top-bar-right">
+          <span><i class="fa-solid fa-clock"></i>Emergency: 24/7</span>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-cross"></i></div>
+          <div class="logo-text">
+            <span class="hospital-name">Christian Hospital Sialkot</span>
+            <span class="hospital-sub">Sialkot, Punjab, Pakistan</span>
+          </div>
+        </a>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="departments.html">Departments</a>
+          <a href="doctors.html" class="active">Doctors</a>
+          <a href="nursing-school.html">Nursing School</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <h1>Our Medical Team</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Our Doctors</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section-padding-sm">
+    <div class="container text-center reveal">
+      <span class="section-label">Expert Care</span>
+      <h2 class="section-title">Meet Our <span>Specialist Doctors</span></h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Our team of over 60 dedicated physicians and surgeons brings expertise, compassion, and a genuine commitment to the communities of Sialkot and Punjab.</p>
+    </div>
+  </section>
+
+  <!-- SEARCH & FILTER -->
+  <section style="padding: 0 0 20px;">
+    <div class="container">
+      <div class="search-filter-bar reveal">
+        <div class="search-input-wrap">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" id="doctorSearch" placeholder="Search by name or specialty..." aria-label="Search doctors" />
+        </div>
+        <select class="filter-select" id="doctorFilter" aria-label="Filter by specialty">
+          <option value="">All Specialties</option>
+          <option value="obstetrics">Obstetrics &amp; Gynecology</option>
+          <option value="pediatrics">Pediatrics</option>
+          <option value="surgery">General Surgery</option>
+          <option value="medicine">General Medicine</option>
+          <option value="orthopedics">Orthopedics</option>
+          <option value="ophthalmology">Ophthalmology</option>
+          <option value="emergency">Emergency Medicine</option>
+          <option value="radiology">Radiology</option>
+        </select>
+        <button class="btn btn-primary" onclick="document.getElementById('doctorSearch').value=''; document.getElementById('doctorFilter').value=''; document.querySelectorAll('.doctor-card').forEach(c=>c.style.display='');">
+          <i class="fa-solid fa-rotate-left"></i> Reset
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTORS GRID -->
+  <section class="section-padding" style="padding-top: 10px;">
+    <div class="container">
+      <div class="doctors-grid" id="doctorsGrid">
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar">SA</div>
+          <h3>Dr. Sarah Ahmad</h3>
+          <span class="doctor-specialty">Obstetrics &amp; Gynecology</span>
+          <div class="experience"><i class="fa-solid fa-star"></i> 18 Years Experience</div>
+          <p style="font-size:0.8rem;color:var(--text-body);margin-bottom:16px;">MBBS, FCPS (Obs &amp; Gynae) — Senior Consultant</p>
+          <a href="contact.html" class="btn btn-outline-primary"><i class="fa-solid fa-calendar-check"></i>View Profile</a>
+        </div>
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#4a90d9,#1a3c5e);">MK</div>
+          <h3>Dr. Mohammed Khan</h3>
+          <span class="doctor-specialty">Pediatrics</span>
+          <div class="experience"><i class="fa-solid fa-star"></i> 14 Years Experience</div>
+          <p style="font-size:0.8rem;color:var(--text-body);margin-bottom:16px;">MBBS, DCH, FCPS (Pediatrics) — Consultant Pediatrician</p>
+          <a href="contact.html" class="btn btn-outline-primary"><i class="fa-solid fa-calendar-check"></i>View Profile</a>
+        </div>
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#f0a500,#c87f00);">AR</div>
+          <h3>Dr. Asif Rehman</h3>
+          <span class="doctor-specialty">General Surgery</span>
+          <div class="experience"><i class="fa-solid fa-star"></i> 20 Years Experience</div>
+          <p style="font-size:0.8rem;color:var(--text-body);margin-bottom:16px;">MBBS, FCPS (Surgery) — Senior Surgeon &amp; HOD</p>
+          <a href="contact.html" class="btn btn-outline-primary"><i class="fa-solid fa-calendar-check"></i>View Profile</a>
+        </div>
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#22c55e,#16a34a);">FN</div>
+          <h3>Dr. Fatima Naz</h3>
+          <span class="doctor-specialty">General Medicine</span>
+          <div class="experience"><i class="fa-solid fa-star"></i> 12 Years Experience</div>
+          <p style="font-size:0.8rem;color:var(--text-body);margin-bottom:16px;">MBBS, MRCP — Consultant Physician</p>
+          <a href="contact.html" class="btn btn-outline-primary"><i class="fa-solid fa-calendar-check"></i>View Profile</a>
+        </div>
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">IH</div>
+          <h3>Dr. Imran Hassan</h3>
+          <span class="doctor-specialty">Orthopedics</span>
+          <div class="experience"><i class="fa-solid fa-star"></i> 16 Years Experience</div>
+          <p style="font-size:0.8rem;color:var(--text-body);margin-bottom:16px;">MBBS, FCPS (Orthopedics) — Consultant Orthopedic Surgeon</p>
+          <a href="contact.html" class="btn btn-outline-primary"><i class="fa-solid fa-calendar-check"></i>View Profile</a>
+        </div>
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#06b6d4,#0891b2);">RB</div>
+          <h3>Dr. Rubina Bashir</h3>
+          <span class="doctor-specialty">Ophthalmology</span>
+          <div class="experience"><i class="fa-solid fa-star"></i> 11 Years Experience</div>
+          <p style="font-size:0.8rem;color:var(--text-body);margin-bottom:16px;">MBBS, FCPS (Ophthalmology) — Eye Specialist</p>
+          <a href="contact.html" class="btn btn-outline-primary"><i class="fa-solid fa-calendar-check"></i>View Profile</a>
+        </div>
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#ef4444,#dc2626);">TM</div>
+          <h3>Dr. Tariq Mahmood</h3>
+          <span class="doctor-specialty">Emergency Medicine</span>
+          <div class="experience"><i class="fa-solid fa-star"></i> 9 Years Experience</div>
+          <p style="font-size:0.8rem;color:var(--text-body);margin-bottom:16px;">MBBS, DCEM — Emergency Medicine Specialist</p>
+          <a href="contact.html" class="btn btn-outline-primary"><i class="fa-solid fa-calendar-check"></i>View Profile</a>
+        </div>
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar" style="background:linear-gradient(135deg,#f97316,#ea580c);">NQ</div>
+          <h3>Dr. Nadia Qureshi</h3>
+          <span class="doctor-specialty">Radiology</span>
+          <div class="experience"><i class="fa-solid fa-star"></i> 13 Years Experience</div>
+          <p style="font-size:0.8rem;color:var(--text-body);margin-bottom:16px;">MBBS, FCPS (Radiology) — Consultant Radiologist</p>
+          <a href="contact.html" class="btn btn-outline-primary"><i class="fa-solid fa-calendar-check"></i>View Profile</a>
+        </div>
+
+      </div>
+
+      <!-- No results message (hidden by default) -->
+      <div id="noResults" style="display:none; text-align:center; padding:60px 0; color:var(--mid-gray);">
+        <i class="fa-solid fa-user-doctor" style="font-size:3rem; margin-bottom:16px; display:block;"></i>
+        <h3 style="color:var(--mid-gray); margin-bottom:8px;">No doctors found</h3>
+        <p>Try adjusting your search or filter criteria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN OUR TEAM BANNER -->
+  <section class="section-padding bg-light">
+    <div class="container text-center reveal">
+      <span class="section-label">Careers</span>
+      <h2 class="section-title">Join Our <span>Medical Team</span></h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Are you a healthcare professional who shares our values of faith, compassion, and excellence? We are always looking for dedicated individuals to join the CHS family.</p>
+      <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i>Send Your CV</a>
+    </div>
+  </section>
+
+  <!-- APPOINTMENT BANNER -->
+  <section class="appointment-banner">
+    <div class="container">
+      <div class="content reveal">
+        <span class="section-label" style="color:rgba(255,255,255,0.6);">Book an Appointment</span>
+        <h2>Schedule a Consultation</h2>
+        <p>Contact us to book an appointment with one of our specialists. We are here to help with your health needs.</p>
+        <a href="tel:0523251234" class="btn btn-gold"><i class="fa-solid fa-phone"></i>Call: 052-3251234</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i class="fa-solid fa-cross"></i></div>
+            <span class="footer-logo-text">Christian Hospital Sialkot</span>
+          </div>
+          <p class="footer-about-text">Christian Hospital Sialkot has been serving the people of Sialkot and Punjab since 1924. Our mission is rooted in faith and a deep commitment to compassionate, accessible healthcare for all.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="mailto:himanshu6245554@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+            <li><a href="departments.html"><i class="fa-solid fa-chevron-right"></i>Departments</a></li>
+            <li><a href="doctors.html"><i class="fa-solid fa-chevron-right"></i>Our Doctors</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Working Hours</h4>
+          <div class="footer-hours">
+            <div class="hour-row"><span>Mon – Fri</span><span>8:00 AM – 1:00 PM</span></div>
+            <div class="hour-row"><span>Saturday</span><span>8:00 AM – 12:00 PM</span></div>
+            <div class="hour-row"><span>Sunday</span><span>Emergency Only</span></div>
+            <div class="hour-row"><span>Emergency</span><span class="open">24 / 7 Open</span></div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>Christian Hospital, Sialkot, Punjab, Pakistan</span></div>
+            <div class="contact-item"><i class="fa-solid fa-phone"></i><a href="tel:0523251234">052-3251234</a></div>
+            <div class="contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:himanshu6245554@gmail.com">himanshu6245554@gmail.com</a></div>
+            <div class="contact-item"><i class="fa-solid fa-truck-medical"></i><span>Emergency: Available 24/7</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <span>&copy; 2025 Christian Hospital Sialkot. All rights reserved.</span>
+          <span>Serving Humanity Since <a href="about.html">1924</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923094829109?text=Assalam%20o%20Alaikum%2C%20I%20have%20an%20enquiry%20about%20Christian%20Hospital%20Sialkot."
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="backToTop" aria-label="Back to top" style="
+    position:fixed;bottom:28px;right:28px;z-index:999;
+    width:46px;height:46px;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--primary));
+    color:white;border:none;cursor:pointer;
+    box-shadow:0 4px 15px rgba(74,144,217,0.4);font-size:1.1rem;
+    opacity:0;pointer-events:none;transform:translateY(10px);
+    transition:opacity 0.3s,transform 0.3s;
+    display:flex;align-items:center;justify-content:center;">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Extended filter to show "no results" message
+    (function() {
+      const search = document.getElementById('doctorSearch');
+      const filter = document.getElementById('doctorFilter');
+      const noResults = document.getElementById('noResults');
+      const grid = document.getElementById('doctorsGrid');
+
+      function checkResults() {
+        const visible = grid.querySelectorAll('.doctor-card:not([style*="display: none"])').length;
+        noResults.style.display = visible === 0 ? 'block' : 'none';
+      }
+
+      if (search) search.addEventListener('input', function() { setTimeout(checkResults, 50); });
+      if (filter) filter.addEventListener('change', function() { setTimeout(checkResults, 50); });
+    })();
+  </script>
+</body>
+</html>
